@@ -1,16 +1,17 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import med.voll.api.endereco.DadosEnderecoDTO;
+import med.voll.api.domain.endereco.DadosEnderecoDTO;
 
 public record DadosCadastroMedicosDTO(
-        @NotBlank //campo obrigatorio, nao pode ser nulo e vazio
+        @NotBlank(message = "Nome é obrigatório") //campo obrigatorio, nao pode ser nulo e vazio
         String nome,
-        @NotBlank @Email
+        @NotBlank(message = "{email.obrigatorio}")
+        @Email
         String email,
         @NotBlank
         String telefone,

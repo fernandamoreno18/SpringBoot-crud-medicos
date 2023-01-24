@@ -1,9 +1,7 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import med.voll.api.endereco.DadosEnderecoDTO;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.domain.endereco.DadosEnderecoDTO;
 
 //Aqui é criado apenas os campos id e os que podem ser atualizaveis
 public record DadosAtualizacaoMedicosDTO(
